@@ -6,8 +6,10 @@ function Home() {
   const videoRef = React.useRef()
 
   const handleLoaded = () => {
-    setLoaded(true)
-    videoRef.current.play()
+    setTimeout(() => {
+      setLoaded(true)
+      videoRef.current.play()
+    }, 1000)
   }
 
   return (
@@ -32,7 +34,7 @@ function Home() {
         onLoadedData={handleLoaded}
         className={`${
           loaded ? 'opacity-60' : 'opacity-0'
-        } transition duration-[4s] ease-in-out z-10 w-screen h-screen object-cover pointer-events-none`}>
+        } transition duration-5 z-10 w-full h-full inset-0 object-cover pointer-events-none`}>
         <source src={video} type='video/mp4' />
         Tu navegador no soporta video
       </video>
