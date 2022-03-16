@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.w-available {
+  width: -moz-available, -webkit-fill-available;
+}
+
+.h-available {
+  height: -moz-available, -webkit-fill-available;
+}

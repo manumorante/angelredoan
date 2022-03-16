@@ -13,7 +13,7 @@ function Home() {
   }
 
   return (
-    <div className='w-full h-full flex justify-center items-center'>
+    <div className='w-full h-full flex justify-center items-center overflow-hidden'>
       <article
         className='fixed z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
  text-2xl'>
@@ -28,13 +28,12 @@ function Home() {
         ref={videoRef}
         loop
         muted
-        autoPlay
         playsInline
         preload='auto'
         onLoadedData={handleLoaded}
         className={`${
           loaded ? 'opacity-60' : 'opacity-0'
-        } transition duration-5 z-10 w-full h-full inset-0 object-cover pointer-events-none`}>
+        } transition duration-5 z-10 w-full h-full object-cover pointer-events-none overflow-hidden`}>
         <source src={video} type='video/mp4' />
         Tu navegador no soporta video
       </video>
