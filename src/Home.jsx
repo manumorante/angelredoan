@@ -17,10 +17,8 @@ function Home() {
       <article
         className='fixed z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
  text-2xl'>
-        <div className='max-w-xl font-serif text-5xl font-extrabold'>
-          <span className='bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-violet-500'>
-            Angel Redouan creativo, diseñador, estilista. Lorem ipsum dolor sit
-          </span>
+        <div className='max-w-xl font-serif text-5xl text-neutral-900 font-extrabold'>
+          Angel Redouan creativo, diseñador, estilista.
         </div>
       </article>
 
