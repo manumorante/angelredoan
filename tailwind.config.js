@@ -1,5 +1,5 @@
 module.exports = {
-  content: ['./src/**/*.{html,jsx}', './index.html'],
+  content: ['./app/**/*.{js,jsx}', './ui/**/*.jsx'],
   theme: {
     extend: {
       transitionDuration: {
@@ -12,5 +12,10 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }) {
+      addVariant('child', '& > *')
+      addVariant('children', '& *')
+    },
+  ],
 }

@@ -1,7 +1,10 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
+import 'styles/globals.css'
+
+export default function RootLayout({ children }) {
+  return (
+    <html>
+      <head>
+      <meta charset="UTF-8" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta
       name="apple-mobile-web-app-status-bar-style"
@@ -11,9 +14,10 @@
       content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
     <title>Angel Redouan</title>
-  </head>
-  <body>
-    <div class="bg-black w- w-screen h-screen overflow-hidden" id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
-</html>
+      </head>
+      <body className='bg-black w-full h-full overflow-hidden'>
+        {children}
+      </body>
+    </html>
+  )
+}
