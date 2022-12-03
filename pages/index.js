@@ -1,6 +1,10 @@
 import cx from 'classnames'
+import { useRouter } from 'next/router'
 
 function Index() {
+  const router = useRouter()
+  const video = router.basePath + '/tela.mp4'
+
   return (
     <div className='Index flex justify-center items-center overflow-hidden'>
       <article className='relative z-20 p-8'>
@@ -32,7 +36,7 @@ function Index() {
           // From 0 to 0.4 fade with 0.6 delay
           'opacity-0 animate-[fade-in-40_3s_ease-in_0.6s_forwards]'
         )}>
-        <source src='/tela.mp4' type='video/mp4' />
+        <source src={video} type='video/mp4' />
       </video>
     </div>
   )
