@@ -1,21 +1,29 @@
 module.exports = {
-  content: ['./app/**/*.{js,jsx}', './ui/**/*.jsx'],
+  content: ['./pages/**/*.{js,jsx}', './components/**/*.{js,jsx}'],
   theme: {
     extend: {
-      transitionDuration: {
-        200: '200ms',
-        400: '400ms',
-        2: '2s',
-        3: '3s',
-        4: '4s',
-        5: '5s',
+      keyframes: {
+        'hue-rotate': {
+          '0%': { filter: 'hue-rotate(0deg)' },
+          '100%': { filter: 'hue-rotate(360deg)' },
+        },
+
+        'fade-in': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+
+        'fade-in-40': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '0.4' },
+        },
+
+        'fade-out': {
+          '0%': { opacity: '1' },
+          '100%': { opacity: '0' },
+        },
       },
     },
   },
-  plugins: [
-    function ({ addVariant }) {
-      addVariant('child', '& > *')
-      addVariant('children', '& *')
-    },
-  ],
+  plugins: [],
 }

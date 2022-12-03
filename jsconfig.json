@@ -1,11 +1,5 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["ui/*"]
-    }
-  },
-  "include": ["**/*.js", "**/*.jsx"],
-  "exclude": ["node_modules"]
+    "baseUrl": "."
+  }
 }
